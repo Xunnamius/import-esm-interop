@@ -1,6 +1,6 @@
 {
   "name": "import-esm-interop",
-  "version": "0.0.0-develop",
+  "version": "1.0.0",
   "description": "A tiny wrapper around the dynamic import function for \"requiring\" ES modules in CJS code bundled by Webpack without triggering the ugly \"critical dependency\" warning",
   "keywords": [
     "webpack",
