@@ -33,4 +33,4 @@
 
 [1]: README.md#importesm
 [2]:
-  https://github.com/Xunnamius/import-esm-interop/blob/76b406b/src/index.ts#L2
+  https://github.com/Xunnamius/import-esm-interop/blob/2e32b3d/src/index.ts#L2
