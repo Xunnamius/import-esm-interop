@@ -52,7 +52,7 @@ npm install import-esm-interop
 > down to CJS (such as TypeScript)!
 
 ```TypeScript
-const importEsm = require('import-esm-interop');
+const { importEsm } = require('import-esm-interop');
 
 // Equivalent to (await import('some-lib')).default
 const someLib = await importEsm('some-lib');
