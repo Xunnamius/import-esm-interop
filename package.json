@@ -28,7 +28,7 @@
     ".": {
       "types": "./dist/types/src/index.d.ts",
       "module": null,
-      "node": "./dist/cjs-static/index.js",
+      "node": "./dist/cjs/index.js",
       "default": null
     },
     "./package": "./package.json",

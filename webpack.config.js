@@ -65,8 +65,8 @@ const externals = () => [
   }
 ];
 
-const libCjsStaticConfig = {
-  name: 'cjs-static',
+const libCjsConfig = {
+  name: 'cjs',
   mode: 'production',
   target: 'node',
   node: false,
@@ -75,11 +75,9 @@ const libCjsStaticConfig = {
 
   output: {
     filename: 'index.js',
-    path: `${__dirname}/dist/cjs-static`,
-    // ! ▼ Only required for libraries
-    // ! ▼ Note: ESM outputs (esm-shakable) are handled by Babel
+    path: `${__dirname}/dist/cjs`,
     library: {
-      type: 'commonjs-static'
+      type: 'commonjs2'
     }
   },
 
@@ -106,94 +104,5 @@ const libCjsStaticConfig = {
   plugins: [...envPlugins()]
 };
 
-const externalsConfig = {
-  name: 'externals',
-  mode: 'production',
-  target: 'node',
-  node: false,
-
-  entry: {
-    'is-next-compat': `${__dirname}/external-scripts/is-next-compat.ts`
-  },
-
-  output: {
-    filename: '[name].js',
-    path: `${__dirname}/external-scripts/bin`
-  },
-
-  externals: externals(),
-  externalsPresets: { node: true },
-
-  stats: {
-    orphanModules: true,
-    providedExports: true,
-    usedExports: true,
-    errorDetails: true
-  },
-
-  resolve: {
-    extensions: ['.ts', '.wasm', '.mjs', '.cjs', '.js', '.json'],
-    // ! If changed, also update these aliases in tsconfig.json,
-    // ! jest.config.js, next.config.ts, and .eslintrc.js
-    alias: IMPORT_ALIASES
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(ts|js)x?$/,
-        exclude: /node_modules/,
-        use: 'babel-loader'
-      }
-    ]
-  },
-  optimization: { usedExports: true },
-  plugins: [
-    ...envPlugins(),
-    // * ▼ For non-bundled externals, make entry file executable w/ shebang
-    new BannerPlugin({ banner: '#!/usr/bin/env node', raw: true, entryOnly: true })
-  ]
-};
-
-const cliConfig = {
-  name: 'cli',
-  mode: 'production',
-  target: 'node',
-  node: false,
-
-  entry: `${__dirname}/src/cli.ts`,
-
-  output: {
-    filename: 'cli.js',
-    path: `${__dirname}/dist`
-  },
-
-  externals: externals(),
-  externalsPresets: { node: true },
-
-  stats: {
-    orphanModules: true,
-    providedExports: true,
-    usedExports: true,
-    errorDetails: true
-  },
-
-  resolve: {
-    extensions: ['.ts', '.wasm', '.mjs', '.cjs', '.js', '.json'],
-    // ! If changed, also update these aliases in tsconfig.json,
-    // ! jest.config.js, next.config.ts, and .eslintrc.js
-    alias: IMPORT_ALIASES
-  },
-  module: {
-    rules: [{ test: /\.(ts|js)x?$/, loader: 'babel-loader', exclude: /node_modules/ }]
-  },
-  optimization: { usedExports: true },
-  plugins: [
-    ...envPlugins(),
-    // * ▼ For bundled CLI applications, make entry file executable w/ shebang
-    new BannerPlugin({ banner: '#!/usr/bin/env node', raw: true, entryOnly: true })
-  ]
-};
-
-void cliConfig;
-module.exports = [libCjsStaticConfig, externalsConfig];
+module.exports = [libCjsConfig];
 debug('exports: %O', module.exports);
