@@ -20,8 +20,8 @@
 
 # import-esm-interop
 
-> [WTF is this?!][3] ... ... Well, this package is kinda useless until [said
-> issue][3] is resolved.
+> [WTF is this?!][3] Wow, well since I'm not giving up Jest anytime soon, this
+> package is kinda useless until the segfault issue is resolved...
 
 This package exposes a tiny Node.js-only wrapper around the `import` function.
 This purpose of this wrapper is as syntactic sugar for dynamic imports of
