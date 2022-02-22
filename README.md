@@ -20,6 +20,9 @@
 
 # import-esm-interop
 
+> [WTF is this?!][3] ... ... Well, this package is kinda useless until [said
+> issue][3] is resolved.
+
 This package exposes a tiny Node.js-only wrapper around the `import` function.
 This purpose of this wrapper is as syntactic sugar for dynamic imports of
 [**externalized ESM dependencies**][webpack-node-externals] in TypeScript/ESM
@@ -213,3 +216,4 @@ information.
 [webpack-node-externals]: https://www.npmjs.com/package/webpack-node-externals
 [1]: https://github.com/webpack/webpack/issues/196#issuecomment-232465701
 [2]: https://github.com/webpack/webpack/issues/196#issuecomment-232355903
+[3]: https://github.com/nodejs/node/issues/35889
