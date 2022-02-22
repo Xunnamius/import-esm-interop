@@ -32,7 +32,12 @@ module.exports = {
     test: {
       sourceMaps: 'both',
       presets: [
-        ['@babel/preset-env', { targets: { node: true } }],
+        [
+          '@babel/preset-env',
+          // ! We exclude "proposal-dynamic-import" only for this package!
+          // TODO: ... once V8 deep bug is fixed
+          { targets: { node: true } /*, exclude: ['proposal-dynamic-import']*/ }
+        ],
         ['@babel/preset-typescript', { allowDeclareFields: true }]
         // ? We don't care about minification
       ],
