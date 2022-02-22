@@ -79,7 +79,7 @@ const { bNamedExport, cNamedExport } = await importEsm<{
   cNamedExport: import('some-lib').cNamedExport
 }>('some-lib', 'bNamedExport', 'cNamedExport');
 
-// Equivalent to (await import('some-lib'))
+// Equivalent to await import('some-lib')
 const SomeLib = await importEsm('some-lib', '*');
 
 // Equivalent to the above, but with TypeScript typings
