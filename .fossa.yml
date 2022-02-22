@@ -1,6 +1,6 @@
 version: 3
 project:
-  name: NTARH
+  name: import-esm-interop
 targets:
   only:
     - type: npm
