@@ -1,27 +1,16 @@
-<!-- prettier-ignore-start -->
-
 <!-- badges-start -->
 
 [![Black Lives Matter!][badge-blm]][link-blm]
-[![Maintenance status][badge-maintenance]][link-repo]
-[![Last commit timestamp][badge-last-commit]][link-repo]
-[![Open issues][badge-issues]][link-issues]
-[![Pull requests][badge-pulls]][link-pulls]
-[![Codecov][badge-codecov]][link-codecov]
-[![Source license][badge-license]][link-license]
-[![Tree shaking support][badge-tree-shaking]][link-bundlephobia]
-[![Compressed package size][badge-size]][link-bundlephobia]
-[![NPM version][badge-npm]][link-npm]
-[![Uses Semantic Release!][badge-semantic-release]][link-semantic-release]
+[![!!UNMAINTAINED!!][badge-unmaintained]][link-unmaintained]
 
 <!-- badges-end -->
 
-<!-- prettier-ignore-end -->
+# ⛔️ DEPRECATED/UNMAINTAINED
 
-# import-esm-interop
-
-> [WTF is this?!][3] Wow, well since I'm not giving up Jest anytime soon, this
-> package is kinda useless until the segfault issue is resolved...
+> [!CAUTION]
+>
+> The [use case][3] for this package has thankfully been fixed! Yay! No need
+> to bother with any of the below.
 
 This package exposes a tiny Node.js-only wrapper around the `import` function.
 This purpose of this wrapper is as syntactic sugar for dynamic imports of
@@ -154,6 +143,10 @@ information.
 
 [badge-blm]: https://xunn.at/badge-blm 'Join the movement!'
 [link-blm]: https://xunn.at/donate-blm
+[badge-unmaintained]:
+  https://xunn.at/badge-unmaintained
+  'Unfortunately, this project is unmaintained (forks welcome!)'
+[link-unmaintained]: https://xunn.at/link-unmaintained
 [badge-maintenance]:
   https://img.shields.io/maintenance/active/2022
   'Is this package maintained?'
