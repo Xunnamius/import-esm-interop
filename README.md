@@ -9,7 +9,7 @@
 
 > [!CAUTION]
 >
-> The [use case][3] for this package has thankfully been fixed! Yay! No need
+> With much improved ESM-CJS interop support compared to several years ago, as well as improvements to babel and webpack, the major use cases (and [major blockers][3]) for this package have thankfully been fixed. Yay! No need
 > to bother with any of the below.
 
 This package exposes a tiny Node.js-only wrapper around the `import` function.
